@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import qLifeEvent.interview.solution.Solution_1;
+import qLifeEvent.interview.solution.Solution_336;
 
 /**
  * test for Interview Solution
@@ -33,7 +34,14 @@ public class SolutionTest {
     }
 
     @Test
-    public void testSolution_3() {
+    public void testSolution_336() {
+        final Solution_336 solution = new Solution_336();
+        final String[] words = { "abcd", "dcba", "lls", "s", "sssll" };
+
+        // System.out.println("Result: " + solution.isPalindromic("bat", "tab"));
+
+        System.out.println(solution.palindromePairs(words));
 
     }
+
 }
