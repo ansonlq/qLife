@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import qLifeEvent.interview.solution.Solution_1;
+import qLifeEvent.interview.solution.Solution_15;
 import qLifeEvent.interview.solution.Solution_336;
 
 /**
@@ -29,8 +30,11 @@ public class SolutionTest {
     }
 
     @Test
-    public void testSolution_251() {
+    public void testSolution_15() {
+        final Solution_15 solution = new Solution_15();
+        final int[] words = { -1, 0, 1, 2, -1, -4 };
 
+        System.out.println(solution.threeSum(words));
     }
 
     @Test
@@ -40,7 +44,7 @@ public class SolutionTest {
 
         // System.out.println("Result: " + solution.isPalindromic("bat", "tab"));
 
-        System.out.println(solution.palindromePairs(words));
+        // System.out.println(solution.palindromePairs2(words));
 
     }
 
