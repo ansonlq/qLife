@@ -7,6 +7,8 @@ import org.junit.runners.JUnit4;
 
 import qLifeEvent.interview.solution.Solution_1;
 import qLifeEvent.interview.solution.Solution_15;
+import qLifeEvent.interview.solution.Solution_18;
+import qLifeEvent.interview.solution.Solution_220;
 import qLifeEvent.interview.solution.Solution_336;
 
 /**
@@ -34,7 +36,16 @@ public class SolutionTest {
         final Solution_15 solution = new Solution_15();
         final int[] words = { -1, 0, 1, 2, -1, -4 };
 
-        System.out.println(solution.threeSum(words));
+        System.out.println(solution.threeSumMyWay(words));
+    }
+
+    @Test
+    public void testSolution_18() {
+        final Solution_18 solution = new Solution_18();
+        // final int[] words = { -1, 0, 1, 2, -1, -4 };
+        final int[] words = { 1, 0, -1, 0, -2, 2 };
+
+        System.out.println(solution.fourSum(words, 0));
     }
 
     @Test
@@ -42,10 +53,19 @@ public class SolutionTest {
         final Solution_336 solution = new Solution_336();
         final String[] words = { "abcd", "dcba", "lls", "s", "sssll" };
 
+        System.out.println(-3 / 4);
         // System.out.println("Result: " + solution.isPalindromic("bat", "tab"));
 
         // System.out.println(solution.palindromePairs2(words));
 
     }
 
+    @Test
+    public void testSolution_220() {
+        final Solution_220 solution = new Solution_220();
+        final int nums[] = { -1, 2147483647 };
+
+        System.out.println("Result: " + solution.containsNearbyAlmostDuplicate(nums, 1, 2147483647));
+
+    }
 }

@@ -2,8 +2,10 @@ package qLifeEvent.interview.solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -76,6 +78,46 @@ public class Solution_15 {
                     k--;
                 }
             }
+        }
+
+        return resultList;
+    }
+
+    public List<List<Integer>> threeSumMyWay(final int[] nums) {
+        final List<List<Integer>> resultList = new ArrayList<List<Integer>>(3);
+        final Set<List<Integer>> filterDuplicated = new HashSet<List<Integer>>();
+
+        if (nums == null || nums.length < 3) {
+            return null;
+        }
+
+        // Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length; i++) {
+            final Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+            final int newTarget = 0 - nums[i];
+
+            for (int j = i + 1; j < nums.length; j++) {
+                if (map.containsKey(nums[j])) {
+                    System.out.println("Position: " + i + " Value: " + nums[i]);
+                    System.out.println("Position: " + map.get(nums[j]) + " Value: " + nums[map.get(nums[j])]);
+                    System.out.println("Position: " + j + " Value: " + nums[j]);
+
+                    final List<Integer> integerList = new ArrayList<Integer>(3);
+                    integerList.add(nums[i]);
+                    integerList.add(nums[map.get(nums[j])]);
+                    integerList.add(nums[j]);
+
+                    if (!filterDuplicated.contains(integerList)) {
+                        filterDuplicated.add(integerList);
+                        resultList.add(integerList);
+                    }
+                } else {
+                    final int result = newTarget - nums[j];
+                    map.put(result, j);
+                }
+            }
+
         }
 
         return resultList;
