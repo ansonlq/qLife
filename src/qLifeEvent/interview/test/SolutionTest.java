@@ -9,7 +9,9 @@ import qLifeEvent.interview.solution.Solution_1;
 import qLifeEvent.interview.solution.Solution_15;
 import qLifeEvent.interview.solution.Solution_18;
 import qLifeEvent.interview.solution.Solution_220;
+import qLifeEvent.interview.solution.Solution_243;
 import qLifeEvent.interview.solution.Solution_336;
+import qLifeEvent.interview.solution.Solution_66;
 
 /**
  * test for Interview Solution
@@ -66,6 +68,29 @@ public class SolutionTest {
         final int nums[] = { -1, 2147483647 };
 
         System.out.println("Result: " + solution.containsNearbyAlmostDuplicate(nums, 1, 2147483647));
+
+    }
+
+    @Test
+    public void testSolution_66() {
+        final Solution_66 solution = new Solution_66();
+
+        final int nums[] = { 9, 9, 9, 9, 9 };
+        final int result[] = solution.plusOne(nums);
+
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+        }
+
+    }
+
+    @Test
+    public void testSolution_243() {
+        final Solution_243 solution = new Solution_243();
+
+        final String nums[] = { "a", "b" };
+        final int result = solution.shortestDistance(nums, "a", "b");
+        System.out.println("Result: " + result);
 
     }
 }
