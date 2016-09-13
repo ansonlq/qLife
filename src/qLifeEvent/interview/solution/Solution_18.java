@@ -37,7 +37,8 @@ public class Solution_18 {
                         integerList.add(nums[index]);
                         integerList.add(nums[k]);
                         // 保证没有重复的位置的数字
-                        if (!filterDuplicated.contains(integerList) && isEqual(index, i, j, k)) {
+                        // && isEqual(index, i, j, k)
+                        if (!filterDuplicated.contains(integerList)) {
                             filterDuplicated.add(integerList);
                             resultList.add(integerList);
                         }

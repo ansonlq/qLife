@@ -91,7 +91,7 @@ public class Solution_15 {
             return null;
         }
 
-        // Arrays.sort(nums);
+        Arrays.sort(nums);
 
         for (int i = 0; i < nums.length; i++) {
             final Map<Integer, Integer> map = new HashMap<Integer, Integer>();
